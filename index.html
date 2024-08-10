@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#budgets">Budgets</a></li>
+                <li><a href="#reports">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div id="balance-overview">
+                <div id="total-balance"></div>
+                <div id="total-income"></div>
+                <div id="total-expenses"></div>
+                <div id="budget-status"></div>
+            </div>
+        </section>
+
+        <!-- Transactions Section -->
+        <section id="transactions">
+            <h2>Transactions</h2>
+            <form id="transaction-form">
+                <input type="text" id="transaction-name" placeholder="Transaction Name" required>
+                <input type="number" id="transaction-amount" placeholder="Amount" required>
+                <select id="transaction-category" required></select>
+                <select id="transaction-type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories">
+            <h2>Categories</h2>
+            <form id="category-form">
+                <input type="text" id="category-name" placeholder="Category Name" required>
+                <button type="submit">Add Category</button>
+            </form>
+            <ul id="categories-list"></ul>
+        </section>
+
+        <!-- Budgets Section -->
+        <section id="budgets">
+            <h2>Budgets</h2>
+            <form id="budget-form">
+                <select id="budget-category" required></select>
+                <input type="number" id="budget-amount" placeholder="Budget Amount" required>
+                <button type="submit">Set Budget</button>
+            </form>
+            <table id="budgets-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Budgeted Amount</th>
+                        <th>Spent Amount</th>
+                        <th>Remaining</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Reports</h2>
+            <div id="report-charts"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
